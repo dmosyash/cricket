@@ -1,7 +1,7 @@
 # Cricket Scoreboard System
 This is a web application for cricket scoreboard.
 
-[Click here to see the live App](https://home-automation-system.netlify.app/)
+[Click here to see the live App](https://cricket-sb.netlify.app/)
 
 This application is developed in Reactjs.
 

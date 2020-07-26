@@ -1,4 +1,5 @@
 .board {
+    min-width: 100px;
     background-color: white;
     color: black;
     position: fixed;
@@ -16,4 +17,12 @@
 
 .score {
     font-size: medium;
+    margin-bottom: 10px;
+}
+
+.details {
+    max-height: 57vh;
+    position: relative;
+    overflow-y:auto;
+    overflow-x:hidden;
 }

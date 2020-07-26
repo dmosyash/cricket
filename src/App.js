@@ -38,9 +38,6 @@ function App() {
 
   const showScore = (score) => {
     setScore(score);
-    let tmp = scoreDetails;
-    tmp[team] = scoreData;
-    setScoreDetails(tmp);
   }
 
   const inningsOver = data => {
@@ -48,18 +45,15 @@ function App() {
     let tmp = scoreDetails;
     tmp['TeamB'] = data;
     setScoreDetails(tmp);
-    console.log(tmp);
   }
 
   const gameOver = () => {
-    if (scoreDetails[team].target > scoreDetails[team].score) {
-      if (scoreDetails[team].target - 1 === scoreDetails[team].score) {
-        setScore(`This Match is a Draw`);
-      } else {
-        setScore(`${team} Lose`);
-      }
+    if (scoreDetails.TeamA.score === scoreDetails.TeamB.score) {
+      setScore(`This Match is a Draw`);
+    } else if (scoreDetails.TeamA.score > scoreDetails.TeamB.score) {
+        setScore('TeamA Wins');
     } else {
-      setScore(`${team} Wins`);
+      setScore(`TeamB Wins`);
     }
   }
 

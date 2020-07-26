@@ -89,13 +89,13 @@ function BoardDetails({ team, data }) {
     const oppTeam = teams.find(t => t !== team);
     return (
         <div className="details">
-            <span>{team}</span>
+            <h4>{team}</h4>
             <BattingDetails data={data[team]} />
             <BowlingDetails data={data[team]} />
             {data[team].target ?
                 (
                     <>
-                        <span>{team}</span>
+                        <h4>{oppTeam}</h4>
                         <BattingDetails data={data[oppTeam]} />
                         <BowlingDetails data={data[oppTeam]} />
                     </>

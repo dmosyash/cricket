@@ -25,8 +25,7 @@ const startBowling = game => {
     return new Promise(resolve => {
         const bowlInterval = setInterval(() => {
             if (!isPaused) {
-                console.log(game.target, game.score, game.target)
-                if (game.bowls === 119 || (game.target && game.score >= game.target)) {
+                if (game.bowls === 119 || game.wickets === 10 || (game.target && game.score >= game.target)) {
                     clearInterval(bowlInterval);
                     resolve();
                 }
@@ -37,7 +36,7 @@ const startBowling = game => {
 }
 
 const bowl = game => {
-    let scoreIndex = Math.floor(Math.random() * 9);
+    let scoreIndex = Math.floor(Math.random() * 10);
     if (scoreIndex < 7) {
         game.updateScore(typesOfScore[scoreIndex]);
         scoreListener(typesOfScore[scoreIndex], game);

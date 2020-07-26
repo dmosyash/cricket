@@ -21,7 +21,7 @@ class Batsman {
         this.runs += score;
         this.bowls += 1;
         this.fours += score === 4 ? 1 : 0;
-        this.sixs += score === 6 ? 1 : 0;
+        this.sixes += score === 6 ? 1 : 0;
         let sr = this.runs / this.bowls;
         this.sr = sr.toFixed(1);
     }
@@ -76,7 +76,7 @@ class Bowler {
 
     didOut = () => {
         this.bowls += 1;
-        this.overs = `${this.bowls / 6}.${this.bowls % 6}`;
+        this.overs = `${parseInt(this.bowls / 6)}.${this.bowls % 6}`;
         this.wickets += 1;
     }
 
@@ -141,6 +141,7 @@ export default class BoardHandler {
 
             case 'out':
                 this.bowler.didOut();
+                this.wickets += 1;
                 this.batsmen.strike.gotOut(this.bowler.name);
                 let tmp = new Batsman(teams[this.battingTeam][this.batsmenArray.length]);
                 this.batsmenArray.push(tmp);
@@ -170,7 +171,7 @@ export default class BoardHandler {
     }
 
     switchBowler = () => {
-        let randomIndex = Math.floor(Math.random() * 3);
+        let randomIndex = Math.floor(Math.random() * 4);
         this.bowler = this.bowlersArray[randomIndex];
     }
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BoardDetails from './../board-details/BoardDetails';
 
 import './scoreboard.css';
+import teams from '../../services/teams';
 
 /**
  * @name Scoreboard
