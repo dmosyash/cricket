@@ -26,7 +26,7 @@ const startBowling = game => {
         const bowlInterval = setInterval(() => {
             if (!isPaused) {
                 console.log(game.target, game.score, game.target)
-                if (game.bowls == 9 || (game.target && game.score >= game.target)) {
+                if (game.bowls === 119 || (game.target && game.score >= game.target)) {
                     clearInterval(bowlInterval);
                     resolve();
                 }

@@ -53,7 +53,7 @@ function App() {
 
   const gameOver = () => {
     if (scoreDetails[team].target > scoreDetails[team].score) {
-      if (scoreDetails[team].target - 1 == scoreDetails[team].score) {
+      if (scoreDetails[team].target - 1 === scoreDetails[team].score) {
         setScore(`This Match is a Draw`);
       } else {
         setScore(`${team} Lose`);
@@ -68,7 +68,7 @@ function App() {
       <header className="App-header">
         <ScoreBoard team={team} data={scoreDetails} />
         <div className="score-status">{score}</div>
-        <button className="toggle-button" onClick={() => toggleGame(isGameStarted)}>{isGameStarted % 2 == 0 ? 'Start' : 'Stop'}</button>
+        <button className="toggle-button" onClick={() => toggleGame(isGameStarted)}>{isGameStarted % 2 === 0 ? 'Start' : 'Stop'}</button>
       </header>
     </div>
   );

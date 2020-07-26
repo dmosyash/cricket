@@ -26,7 +26,7 @@ function Scoreboard({ team, data }) {
                 <span><span className="label">Overs:</span> {teamData.overs}</span>
                 {teamData.target ? (<><br /><span className="label">target: {teamData.target}</span></>) : null}
             </div>
-            <span style={{ cursor: 'pointer' }} onClick={() => setIsDetailsShown(!isDetailsShown)}>{isDetailsShown ? 'Hide' : 'Show'} Details</span>
+            <span style={{ cursor: 'pointer', color: '#1122dd' }} onClick={() => setIsDetailsShown(!isDetailsShown)}>{isDetailsShown ? 'Hide' : 'Show'} Details</span>
             
             {isDetailsShown ?
                 <BoardDetails team={team} data={data} />
