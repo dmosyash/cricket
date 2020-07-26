@@ -17,7 +17,7 @@ function BattingDetails({ data }) {
                     <td>{bat.bowls}</td>
                     <td>{bat.fours}</td>
                     <td>{bat.sixes}</td>
-                    <td>{bat.wicketsBy}</td>
+                    <td>{bat.wicketBy}</td>
                     <td>{bat.sr}</td>
                 </tr>
             )

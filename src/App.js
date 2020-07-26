@@ -55,6 +55,7 @@ function App() {
     } else {
       setScore(`TeamB Wins`);
     }
+    setIsGameStarted(0);
   }
 
   return (
