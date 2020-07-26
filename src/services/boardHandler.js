@@ -61,7 +61,7 @@ class Bowler {
         this.econ = econ.toFixed(1);
         this.zeros += score === 0 ? 1 : 0;
         this.fours += score === 4 ? 1 : 0;
-        this.sixs += score === 6 ? 1 : 0;
+        this.sixes += score === 6 ? 1 : 0;
     }
 
     updateWide = () => {
